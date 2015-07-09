@@ -1,20 +1,21 @@
 {
-  "name": "hex-rgb-test",
+  "name": "es6-module-test",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
+  "browserify": {
+    "transform": [ "babelify" ]
+  },
   "devDependencies": {
     "babel-core": "^5.6.15",
     "babelify": "^6.1.2",
-    "hex-rgb": "^1.0.0"
+    "hex-rgb": "^1.0.0",
+    "react": "^0.13.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify index.js -t babelify --outfile bundle.js"
+    "build": "browserify index.js --outfile bundle.js",
+    "watch": "watchify index.js --outfile bundle.js"
   },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^0.13.3"
-  }
+  "license": "MIT"
 }
