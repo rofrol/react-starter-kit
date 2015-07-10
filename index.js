@@ -18,24 +18,25 @@ class BaseComponent extends React.Component {
 class NoLink extends BaseComponent {
 	constructor(props) {
 		super(props);
-		this.state = {message: '#abde13'};
-		this._bind('handleChange');
-
-		this.someStyle = {
-			color: 'white',
-			backgroundColor: 'blue'
+		this.state = {
+			message: '#abde13',
+			someStyle: {
+				color: 'white',
+				backgroundColor: 'blue'
+			}
 		};
+		this._bind('handleChange');
 	}
 
 	handleChange(event) {
-		this.setState({message: event.target.value});
+		this.setState( {message: event.target.value, someStyle: {color: 'white', backgroundColor: event.target.value}}	);
 	}
 
 	render() {
 		var message = this.state.message;
 		return (
 			<div>
-				<input style={this.someStyle} type="text" value={message} onChange={this.handleChange} readOnly />
+				<input style={this.state.someStyle} type="text" value={message} onChange={this.handleChange} />
 				<input type="text" value={rgb(message)} readOnly />
 			</div>
 			)
