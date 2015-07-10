@@ -20,6 +20,11 @@ class NoLink extends BaseComponent {
 		super(props);
 		this.state = {message: '#abde13'};
 		this._bind('handleChange');
+
+		this.someStyle = {
+			color: 'white',
+			backgroundColor: 'blue'
+		};
 	}
 
 	handleChange(event) {
@@ -30,7 +35,7 @@ class NoLink extends BaseComponent {
 		var message = this.state.message;
 		return (
 			<div>
-				<input type="text" value={message} onChange={this.handleChange} readOnly/>
+				<input style={this.someStyle} type="text" value={message} onChange={this.handleChange} readOnly />
 				<input type="text" value={rgb(message)} readOnly />
 			</div>
 			)
