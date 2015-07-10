@@ -12,16 +12,19 @@
     "babel-core": "^5.6.15",
     "babelify": "^6.1.2",
     "browserify": "^10.2.6",
+    "errorify": "^0.2.4",
+    "exorcist": "^0.4.0",
     "hex-rgb": "^1.0.0",
     "live-server": "^0.7.1",
     "react": "^0.13.3",
-    "uglifyjs": "^2.4.10",
+    "uglifyify": "^3.0.1",
     "watchify": "^3.2.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify index.js | uglifyjs -mc > bundle.js",
-    "watch": "watchify index.js --outfile bundle.js -dv",
+    "build": "browserify index.js --debug -g uglifyify | exorcist bundle.js.map > bundle.js",
+    "build-dev": "browserify index.js --debug > bundle.js",
+    "watch": "watchify index.js -d -v -o bundle.js -p errorify",
     "live-server": "live-server"
   },
   "license": "MIT"

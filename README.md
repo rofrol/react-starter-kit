@@ -1,16 +1,18 @@
 # Example of es6 module usage
 
-Compiled with browserify and babelify to one file dist/index.js
+Compiled with browserify and babelify to one file bundle.js
 
-## Build
+## Install
 
-    npm run build
+    npm i
+
+## Build incrementally
+
+    npm run watch
 
 ## Live Server
 
-    npm i -g live-server
-    live-server
-
+    npm run live-server
 
 ## Alternative to one build file is to use babel in browser, but node_modules/babel-core/browser.min.js is 1305 KB.
 - https://github.com/ModuleLoader/es6-module-loader - 12.821 KB, addyosmani made 21 commits
