@@ -1,0 +1,6 @@
+body > .errorify {
+  color: #cdd3de;
+  background-color: #1b2b34;
+  font-family: 'Consolas', monospace;
+  padding: 5px 10px;
+}
