@@ -1,30 +1,43 @@
 // https://www.reddit.com/r/javascript/comments/332v73/is_anyone_using_es6_in_a_large_project_hows_it/cqh2u7i
-import hex from 'hex-rgb'
+import hex from 'hex-rgb';
 
-console.log(hex('#abde13').map(function(x) { return x/255} ))
+const rgb = (str) => hex(str).map(x => x/255);
 
-import React from 'react'
+import React from 'react';
+
+// http://www.newmediacampaigns.com/blog/refactoring-react-components-to-es6-classes
+// stopgap until ES7 allows property initializers
+// https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html
+class BaseComponent extends React.Component {
+	_bind(...methods) {
+		methods.forEach( (method) => this[method] = this[method].bind(this) );
+	}
+}
 
 // https://facebook.github.io/react/docs/two-way-binding-helpers.html
-var NoLink = React.createClass({
-  getInitialState: function() {
-    return {message: 'Hello!'};
-  },
-  handleChange: function(event) {
-    this.setState({message: event.target.value});
-  },
-  render: function() {
-    var message = this.state.message;
-    return (
-    	<div>
-	    	<h3>{this.state.message}</h3>
-	    	<input type="text" value={message} onChange={this.handleChange} />
-    	</div>
-    )
-  }
-});
+class NoLink extends BaseComponent {
+	constructor(props) {
+		super(props);
+		this.state = {message: '#abde13'};
+		this._bind('handleChange');
+	}
 
- React.render(
+	handleChange(event) {
+		this.setState({message: event.target.value});
+	}
+
+	render() {
+		var message = this.state.message;
+		return (
+			<div>
+				<input type="text" value={message} onChange={this.handleChange} readOnly/>
+				<input type="text" value={rgb(message)} readOnly />
+			</div>
+			)
+	}
+}
+
+React.render(
 	<NoLink txt="some text" />,
 	document.getElementById('app')
-);
+	);
