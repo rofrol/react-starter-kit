@@ -16,6 +16,7 @@
     "exorcist": "^0.4.0",
     "hex-rgb": "^1.0.0",
     "live-server": "^0.7.1",
+    "parallelshell": "^2.0.0",
     "react": "^0.13.3",
     "uglifyify": "^3.0.1",
     "watchify": "^3.2.3"
@@ -25,7 +26,8 @@
     "build": "browserify index.js --debug -g uglifyify | exorcist bundle.js.map > bundle.js",
     "build-dev": "browserify index.js --debug > bundle.js",
     "watch": "watchify index.js -d -v -o bundle.js -p errorify",
-    "live-server": "live-server"
+    "live-server": "live-server",
+    "dev": "parallelshell \"npm run watch\" \"npm run live-server\""
   },
   "license": "MIT"
 }

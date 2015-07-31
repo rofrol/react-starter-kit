@@ -6,13 +6,9 @@ Compiled with browserify and babelify to one file bundle.js
 
     npm i
 
-## Build incrementally
+## Run
 
-    npm run watch
-
-## Live Server
-
-    npm run live-server
+    npm run dev
 
 ## Alternative to one build file is to use babel in browser, but node_modules/babel-core/browser.min.js is 1305 KB.
 - https://github.com/ModuleLoader/es6-module-loader - 12.821 KB, addyosmani made 21 commits
