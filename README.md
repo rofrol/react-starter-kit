@@ -14,6 +14,7 @@ Compiled with browserify and babelify to one file bundle.js
 - https://github.com/ModuleLoader/es6-module-loader - 12.821 KB, addyosmani made 21 commits
 - https://github.com/systemjs/systemjs - 40.457 kB
 - https://github.com/caridy/es6-micro-loader
+- Seed project for ES6 modules via SystemJS with ES6 syntax using Babel that lazy-load and bundle build with AngularJS https://github.com/Swimlane/angular-systemjs-seed
 
 For Node we can use bootstrap.js from https://www.airpair.com/javascript/posts/using-es6-harmony-with-nodejs
 
