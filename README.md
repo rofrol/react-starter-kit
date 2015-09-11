@@ -1,20 +1,15 @@
 # React starter kit
 
-## DONE
-- es6 modules
-- babel to use es6
-- browserify to bundle modules
-- livereactload for hot reloading
-- uglifyify for minification
-- exorcist for external map files.
-- npm scripts for task running
-
-Compiled with browserify and babelify to one file `bundle.js`.
-
-No additional abstraction like grunt/gulp/webpack.
-
 ## TODO
-
+- [x] es6 modules
+- [x] babel to use es6
+- [x] browserify to bundle modules
+- [x] livereactload for hot reloading
+- [x] uglifyify for minification
+- [x] exorcist for external map files
+- [x] npm scripts for task running
+- [x] compile with browserify and babelify to one file `bundle.js`
+- [x] no additional abstraction like grunt/gulp/webpack
 - [ ] [postcss](https://github.com/postcss/postcss)
 - [ ] [css modules](https://github.com/css-modules/css-modules)
 - [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
