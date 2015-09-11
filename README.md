@@ -121,4 +121,4 @@ To use local dependencies in command line, alias it in package.json
 }
 ```
 
-And then use it this `npm run http-server` or use without aliasing first `node_modules/.bin/http-server`.
+And then use it like this `npm run http-server` or use without aliasing first `node_modules/.bin/http-server`.
