@@ -76,3 +76,17 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 - [css modules](https://github.com/css-modules/css-modules) gives what webpack gives in future standard compliant way thanks to postcss
 - [browesrify + css modules](https://github.com/css-modules/browserify-demo)
 - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
+
+### Why no global dependencies in package.json?
+
+- http://www.joezimjs.com/javascript/no-more-global-npm-packages/
+
+To use local dependencies in command line, alias it in package.json
+
+```javascript
+"scripts": {
+    "http-server": "http-server"
+}
+```
+
+or use `node_modules/.bin/<cmd>`
