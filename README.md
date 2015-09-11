@@ -1,8 +1,15 @@
 # React starter kit
 
-Uses es6 modules, babel to use es6, browserify to bundle modules, livereactload for hot reloading, uglifyify for minification, exorcist for external map files.
+Uses
+- es6 modules
+- babel to use es6
+- browserify to bundle modules
+- livereactload for hot reloading
+- uglifyify for minification
+- exorcist for external map files.
+- npm scripts for task running
 
-Compiled with browserify and babelify to one file bundle.js.
+Compiled with browserify and babelify to one file `bundle.js`.
 
 No additional abstraction like grunt/gulp/webpack.
 
