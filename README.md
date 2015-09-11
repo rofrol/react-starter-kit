@@ -61,6 +61,10 @@ System.import('./index').then(function(index) {
 
 http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
+> no need for grunt/gulp/gloop/glugle/gleffy/gloran/whatever task runner comes out next week
+>
+> — <quote>[_facildeabrir](https://www.reddit.com/r/javascript/comments/2ggc1i/whats_a_nice_clean_and_modern_workflow_for/ckj89rr)</quote>
+
 #### How to use npm and browserify
 
 - http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
