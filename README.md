@@ -91,3 +91,13 @@ To use local dependencies in command line, alias it in package.json
 ```
 
 And then use it this `npm run http-server` or use without aliasing first `node_modules/.bin/http-server`.
+
+## TODO
+
+- [ ] use postcss
+- [ ] use css modules
+- [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
+- [ ] isomorphic/universal/shared javascript with koa
+- [ ] eslint
+- [ ] editorconfig
+- [ ] licence file
