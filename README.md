@@ -13,7 +13,7 @@
 - [ ] [postcss](https://github.com/postcss/postcss)
 - [ ] [css modules](https://github.com/css-modules/css-modules)
 - [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
-- [ ] isomorphic/universal/shared javascript with koa and flux/alt
+- [ ] isomorphic/universal/shared javascript with koa and flux/alt or [relay](https://github.com/relayjs/relay-starter-kit)
 - [ ] [eslint](https://github.com/eslint/eslint)
 - [ ] [editorconfig](http://editorconfig.org/)
 - [ ] licence file
@@ -21,6 +21,7 @@
 - [ ] some react router
 - [ ] [react-simpletabs](http://react-components.com/component/react-simpletabs) or [khan components](https://khan.github.io/react-components/)
 - [ ] [rollup as es6 module bundler](https://github.com/eventualbuddha/rollup-starter-project), [another rollup example](https://github.com/Rich-Harris/rollup-example-for-srcspider) - [source](https://github.com/mbostock/d3/issues/2220#issuecomment-112418053)
+- [ ] flow or typescript
 
 
 ## Install
