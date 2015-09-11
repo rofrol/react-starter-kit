@@ -1,5 +1,7 @@
 # React starter kit
 
+Stop the madness of learning new and fancy task runner/build system that comes every few months. Also use es6 modules.
+
 ## TODO
 - [x] es6 modules
 - [x] babel to use es6
