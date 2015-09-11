@@ -59,6 +59,18 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 > Webpack seems like an amazing tool, and does present some great features (hot module replacement, code splitting, sync vs. async requires, etc). However, it does not promote code re-use in the way that NPM and Browserify does. It encourages a “whole new way” of writing modules and often requires manually-maintained config files. - http://mattdesl.svbtle.com/browserify-vs-webpack
 
+<!-- -->
+> Browserify can do all of that with just a few commands or plugins. And be way less verbose too.
+> - Split files? The factor-bundle plugin.
+> - Watch files? Watchify or many many other options.
+> - Compile to JS? Plugins - Babel or CoffeeScript are really common.
+> - CSS? Yup, browserify-css plugin for that.
+> - Feature flags? Yup, plus it doesn't use a non-standard syntax but instead process.env flags. Envify is much nicer of a solution.
+> - Multiple Entry points? See point 1. Easy.
+> - Optimizing common code. Same as before. Factor-bundle takes care of it.
+>
+> [Source](https://www.reddit.com/r/reactjs/comments/3kaysq/webpack_is_such_a_cool_tool_see_how_instgram_uses/cuw5ojv)
+
 - [css modules](https://github.com/css-modules/css-modules) gives what webpack gives in future standard compliant way thanks to postcss
 - [browesrify + css modules](https://github.com/css-modules/browserify-demo)
 - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
