@@ -16,7 +16,7 @@
 - [ ] isomorphic/universal/shared javascript with koa and flux/alt or [relay](https://github.com/relayjs/relay-starter-kit)
 - [ ] [eslint](https://github.com/eslint/eslint)
 - [ ] [editorconfig](http://editorconfig.org/)
-- [ ] licence file
+- [x] license file
 - [ ] tests using [mocha](https://github.com/mochajs/mocha)/[ava](https://github.com/sindresorhus/ava)/[react-unit](https://github.com/pzavolinsky/react-unit)
 - [ ] some react router
 - [ ] [react-simpletabs](http://react-components.com/component/react-simpletabs) or [khan components](https://khan.github.io/react-components/)
