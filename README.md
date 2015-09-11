@@ -4,6 +4,8 @@ Uses es6 modules, babel to use es6, browserify to bundle modules, livereactload 
 
 Compiled with browserify and babelify to one file bundle.js.
 
+No additional abstraction like grunt/gulp/webpack.
+
 ## Install
 
 Install python for livehotreload
