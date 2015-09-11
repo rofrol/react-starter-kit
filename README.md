@@ -1,6 +1,6 @@
 # React starter kit
 
-Uses
+## DONE
 - es6 modules
 - babel to use es6
 - browserify to bundle modules
@@ -12,6 +12,21 @@ Uses
 Compiled with browserify and babelify to one file `bundle.js`.
 
 No additional abstraction like grunt/gulp/webpack.
+
+## TODO
+
+- [ ] [postcss](https://github.com/postcss/postcss)
+- [ ] [css modules](https://github.com/css-modules/css-modules)
+- [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
+- [ ] isomorphic/universal/shared javascript with koa and flux/alt
+- [ ] [eslint](https://github.com/eslint/eslint)
+- [ ] [editorconfig](http://editorconfig.org/)
+- [ ] licence file
+- [ ] tests using [mocha](https://github.com/mochajs/mocha)/[ava](https://github.com/sindresorhus/ava)/[react-unit](https://github.com/pzavolinsky/react-unit)
+- [ ] some react router
+- [ ] [react-simpletabs](http://react-components.com/component/react-simpletabs) or [khan components](https://khan.github.io/react-components/)
+- [ ] [rollup as es6 module bundler](https://github.com/eventualbuddha/rollup-starter-project), [another rollup example](https://github.com/Rich-Harris/rollup-example-for-srcspider) - [source](https://github.com/mbostock/d3/issues/2220#issuecomment-112418053)
+
 
 ## Install
 
@@ -107,17 +122,3 @@ To use local dependencies in command line, alias it in package.json
 ```
 
 And then use it this `npm run http-server` or use without aliasing first `node_modules/.bin/http-server`.
-
-## TODO
-
-- [ ] [postcss](https://github.com/postcss/postcss)
-- [ ] [css modules](https://github.com/css-modules/css-modules)
-- [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
-- [ ] isomorphic/universal/shared javascript with koa and flux/alt
-- [ ] [eslint](https://github.com/eslint/eslint)
-- [ ] [editorconfig](http://editorconfig.org/)
-- [ ] licence file
-- [ ] tests using [mocha](https://github.com/mochajs/mocha)/[ava](https://github.com/sindresorhus/ava)/[react-unit](https://github.com/pzavolinsky/react-unit)
-- [ ] some react router
-- [ ] [react-simpletabs](http://react-components.com/component/react-simpletabs) or [khan components](https://khan.github.io/react-components/)
-- [ ] [rollup as es6 module bundler](https://github.com/eventualbuddha/rollup-starter-project), [another rollup example](https://github.com/Rich-Harris/rollup-example-for-srcspider) - [source](https://github.com/mbostock/d3/issues/2220#issuecomment-112418053)
