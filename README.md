@@ -97,7 +97,7 @@ And then use it this `npm run http-server` or use without aliasing first `node_m
 - [ ] use postcss
 - [ ] use css modules
 - [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
-- [ ] isomorphic/universal/shared javascript with koa
+- [ ] isomorphic/universal/shared javascript with koa and flux/alt
 - [ ] eslint
 - [ ] editorconfig
 - [ ] licence file
