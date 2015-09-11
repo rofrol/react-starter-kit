@@ -103,3 +103,4 @@ And then use it this `npm run http-server` or use without aliasing first `node_m
 - [ ] eslint
 - [ ] editorconfig
 - [ ] licence file
+- [ ] tests using [mocha](https://github.com/mochajs/mocha)/[ava](https://github.com/sindresorhus/ava)/[react-unit](https://github.com/pzavolinsky/react-unit)
