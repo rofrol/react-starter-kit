@@ -1,8 +1,8 @@
 # React starter kit
 
-Uses es6 modules, babel to use es6, browserify to bundle modules, livereactload for hot reloading, uglifyify for minification, exorcist for external map files
+Uses es6 modules, babel to use es6, browserify to bundle modules, livereactload for hot reloading, uglifyify for minification, exorcist for external map files.
 
-Compiled with browserify and babelify to one file bundle.js
+Compiled with browserify and babelify to one file bundle.js.
 
 ## Install
 
@@ -90,4 +90,4 @@ To use local dependencies in command line, alias it in package.json
 }
 ```
 
-or use `node_modules/.bin/<cmd>`
+And then use it this `npm run http-server` or use without aliasing first `node_modules/.bin/http-server`.
