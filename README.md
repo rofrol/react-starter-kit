@@ -62,9 +62,16 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 - [cmd.exe doesn't support &](https://github.com/npm/npm/issues/8358)
 
-#### How to use parallelshell
+#### parallelshell in cmd.exe
 
-- on Windows, you need to use double-quotes to avoid confusing the argument parser
+On Windows you need to use double-quotes to avoid confusing the argument parser:
+
+```javascript
+  "scripts": {
+    "dev": "parallelshell \"npm run watch\" \"npm run reactload\" \"npm run http-server\""
+  },
+```
+
 
 ### Why npm scripts + browserify instead of webpack?
 
