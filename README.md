@@ -120,4 +120,4 @@ And then use it this `npm run http-server` or use without aliasing first `node_m
 - [ ] tests using [mocha](https://github.com/mochajs/mocha)/[ava](https://github.com/sindresorhus/ava)/[react-unit](https://github.com/pzavolinsky/react-unit)
 - [ ] some react router
 - [ ] [react-simpletabs](http://react-components.com/component/react-simpletabs) or [khan components](https://khan.github.io/react-components/)
-- [ ] [rollup as es6 module bundler](https://github.com/eventualbuddha/rollup-starter-project)
+- [ ] [rollup as es6 module bundler](https://github.com/eventualbuddha/rollup-starter-project), [another rollup example](https://github.com/Rich-Harris/rollup-example-for-srcspider) - [source](https://github.com/mbostock/d3/issues/2220#issuecomment-112418053)
