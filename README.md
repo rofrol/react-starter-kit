@@ -80,6 +80,7 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 ### Why no global dependencies in package.json?
 
 - http://www.joezimjs.com/javascript/no-more-global-npm-packages/
+- http://stackoverflow.com/questions/14657170/installing-global-npm-dependencies-via-package-json/14657796#14657796
 
 To use local dependencies in command line, alias it in package.json
 
