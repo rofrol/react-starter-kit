@@ -26,7 +26,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "browserify index.js --debug -g uglifyify | exorcist bundle.js.map > bundle.js",
     "build-dev": "browserify index.js --debug > bundle.js",
-    "watch": "watchify index.js -d -v -o bundle.js -p errorify",
+    "watch": "watchify index.js -g livereactload -d -v -o bundle.js -p errorify",
     "http-server": "http-server -p 8888",
     "reactload": "livereactload monitor -n bundle.js",
     "dev": "parallelshell \"npm run watch\" \"npm run reactload\" \"npm run http-server\""
