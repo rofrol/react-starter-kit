@@ -31,13 +31,19 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 
 ## Install
 
-Install python for livehotreload
+Install python in your PATH (needed for livereactload - hot reloading), then
 
     npm i
 
 ## Run
 
     npm run dev
+
+## Workflow
+
+- Open your browser at http://localhost:8888.
+- Edit index.js, i.e. add another input, save
+- Watch how content in the browser changes without refreshing browser, thanks to livereactload.
     
 ## Why x instead of y?
 
