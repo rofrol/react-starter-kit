@@ -2,7 +2,7 @@
 
 Stop the madness of learning new and fancy task runner/build system that comes every few months. Also use es6 modules.
 
-You may also look at [angular boilerplate](https://github.com/grillorafael/angular-boilerplate), which also uses npm as task runner.
+You might be interested in [angular boilerplate](https://github.com/grillorafael/angular-boilerplate) which also uses npm as task runner.
 
 ## TODO
 - [x] es6 modules
