@@ -30,7 +30,7 @@
     "build-dev": "browserify index.js --debug > bundle.js",
     "watch": "watchify index.js -g livereactload -d -v -o bundle.js -p errorify",
     "http-server": "http-server -p 8888",
-    "reactload": "livereactload monitor bundle.js",
+    "reactload": "livereactload monitor -n bundle.js",
     "dev": "parallelshell \"npm run watch\" \"npm run reactload\" \"npm run http-server\""
   },
   "license": "MIT"
