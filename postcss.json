@@ -1,0 +1,8 @@
+{
+    "use": ["autoprefixer", "postcss-custom-properties"],
+    "input": "style.css",
+    "output": "dist/bundle.css",
+    "autoprefixer": {
+        "browsers": "last 2 versions"
+    }
+}

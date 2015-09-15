@@ -14,7 +14,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [x] npm scripts for task running
 - [x] compile with browserify and babelify to one file `bundle.js`
 - [x] no additional abstraction like grunt/gulp/webpack
-- [x] [postcss](https://github.com/postcss/postcss) with [cssnext](https://github.com/cssnext/cssnext)
+- [x] [postcss](https://github.com/postcss/postcss)
 - [ ] [css modules](https://github.com/css-modules/css-modules)
 - [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
 - [ ] isomorphic/universal/shared javascript with koa and flux/alt or [relay](https://github.com/relayjs/relay-starter-kit)
@@ -133,3 +133,13 @@ To use local dependencies in command line, alias it in package.json
 ```
 
 And then use it like this `npm run http-server` or use without aliasing first `node_modules/.bin/http-server`.
+
+### Why PostCSS?
+
+https://medium.com/@ddprrt/postcss-misconceptions-faf5dc5038df
+
+### Why not cssnext?
+
+> it's time to think about [deprecating](https://github.com/postcss/postcss/issues/477) [cssnext](https://github.com/cssnext/cssnext/issues/208)
+
+In the future [postcss-cli will not be needed](https://github.com/postcss/postcss/issues/477), cmd line will be included in postcss.
