@@ -14,7 +14,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [x] npm scripts for task running
 - [x] compile with browserify and babelify to one file `bundle.js`
 - [x] no additional abstraction like grunt/gulp/webpack
-- [ ] [postcss](https://github.com/postcss/postcss)
+- [x] [postcss](https://github.com/postcss/postcss) with [cssnext](https://github.com/cssnext/cssnext)
 - [ ] [css modules](https://github.com/css-modules/css-modules)
 - [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
 - [ ] isomorphic/universal/shared javascript with koa and flux/alt or [relay](https://github.com/relayjs/relay-starter-kit)

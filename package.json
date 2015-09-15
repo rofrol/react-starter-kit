@@ -16,6 +16,7 @@
     "babel-core": "^5.6.15",
     "babelify": "^6.1.2",
     "browserify": "^10.2.6",
+    "cssnext": "^1.8.4",
     "errorify": "^0.2.4",
     "exorcist": "^0.4.0",
     "http-server": "^0.8.0",
@@ -26,12 +27,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify index.js --debug -g uglifyify | exorcist bundle.js.map > bundle.js",
-    "build-dev": "browserify index.js --debug > bundle.js",
-    "watch": "watchify index.js -g livereactload -d -v -o bundle.js -p errorify",
+    "css": "cssnext --watch --verbose style.css dist/style.css",
+    "js:build": "browserify index.js --debug -g uglifyify | exorcist dist/bundle.js.map > dist/bundle.js",
+    "js:build-dev": "browserify index.js --debug > dist/bundle.js",
+    "js:watch": "watchify index.js -g livereactload -d -v -o dist/bundle.js -p errorify",
     "http-server": "http-server -p 8888",
-    "reactload": "livereactload monitor -n bundle.js",
-    "dev": "parallelshell \"npm run watch\" \"npm run reactload\" \"npm run http-server\""
+    "reactload": "livereactload monitor -n dist/bundle.js",
+    "dev": "parallelshell \"npm run css\" \"npm run js:watch\" \"npm run reactload\" \"npm run http-server\""
   },
   "license": "MIT"
 }

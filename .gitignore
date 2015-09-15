@@ -1,5 +1,4 @@
 node_modules/
-bundle.js
-bundle.js.map
-npm-debug.log
+npm-debug.log*
 .idea/
+dist/
