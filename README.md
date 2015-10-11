@@ -34,6 +34,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 Install python in your PATH (needed for livereactload - hot reloading), then
 
     npm i
+    mkdir dist
 
 ## Run
 
