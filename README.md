@@ -36,6 +36,16 @@ Install python in your PATH (needed for livereactload - hot reloading), then
     npm i
     mkdir dist
 
+If you got error [msbuild.exe failed with exit code: 1](http://stackoverflow.com/questions/14180012/npm-install-for-some-packages-sqlite3-socket-io-fail-with-error-msb8020-on-wi/22120966#22120966), it's related to node-gyp. Set this:
+
+    npm config set msvs_version 2013
+    
+Or any other version you have. There may be [problem with Visual Studio 2013](http://stackoverflow.com/questions/20051318/npm-native-builds-with-only-visual-studio-2013-installed/26685368#26685368).
+
+More about it:
+- [node-gyp versions](https://github.com/nodejs/node-gyp/blob/master/gyp/pylib/gyp/MSVSVersion.py)
+- https://github.com/nodejs/node-gyp
+
 ## Run
 
     npm run dev
