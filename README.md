@@ -19,7 +19,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
 - [ ] isomorphic/universal/shared javascript with koa and flux/alt or [relay](https://github.com/relayjs/relay-starter-kit)
 - [ ] [eslint](https://github.com/eslint/eslint)
-- [ ] [editorconfig](http://editorconfig.org/)
+- [x] [editorconfig](http://editorconfig.org/)
 - [x] license file
 - [ ] tests using [mocha](https://github.com/mochajs/mocha)/[ava](https://github.com/sindresorhus/ava)/[react-unit](https://github.com/pzavolinsky/react-unit)
 - [ ] some react router

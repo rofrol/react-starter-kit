@@ -1,7 +1,7 @@
 // https://www.reddit.com/r/javascript/comments/332v73/is_anyone_using_es6_in_a_large_project_hows_it/cqh2u7i
 import hex from 'hex-rgb';
 
-const rgb = (str) => hex(str).map(x => x/255);
+const rgb = (str) => hex(str).map(x => x / 255);
 
 import React from 'react';
 
@@ -10,7 +10,7 @@ import React from 'react';
 // https://facebook.github.io/react/blog/2015/01/27/react-v0.13.0-beta-1.html
 class BaseComponent extends React.Component {
 	_bind(...methods) {
-		methods.forEach( (method) => this[method] = this[method].bind(this) );
+		methods.forEach((method) => this[method] = this[method].bind(this));
 	}
 }
 
@@ -29,21 +29,21 @@ class NoLink extends BaseComponent {
 	}
 
 	handleChange(event) {
-		this.setState( {message: event.target.value, someStyle: {color: 'white', backgroundColor: event.target.value}}	);
+		this.setState({message: event.target.value, someStyle: {color: 'white', backgroundColor: event.target.value}});
 	}
 
 	render() {
 		var message = this.state.message;
 		return (
 			<div>
-				<input style={this.state.someStyle} type="text" value={message} onChange={this.handleChange} />
-				<input type="text" value={rgb(message)} readOnly />
+				<input style={this.state.someStyle} type="text" value={message} onChange={this.handleChange}/>
+				<input type="text" value={rgb(message)} readOnly/>
 			</div>
-			)
+		)
 	}
 }
 
 React.render(
-	<NoLink txt="some text" />,
+	<NoLink txt="some text"/>,
 	document.getElementById('app')
-	);
+);
