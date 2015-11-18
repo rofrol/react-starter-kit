@@ -52,18 +52,30 @@ ReactDOM.render(
 );
 
 var contacts = [
-	{key: 1, name: 'John Doe', email: 'john.doe@example.com'},
-	{key: 2, name: 'Joe Pesci'}
+	{key: 1, name: 'John Doe', email: 'john.doe@example.com', description: 'Some guy'},
+	{key: 2, name: 'Joe Pesci', email: 'joe.pesci@example.com'},
+	{key: 3, name: 'Bigfoot Silva'}
 ];
 
-var listElements = contacts.reduce(function(accumulator, contact) {
-	if(contact.email) {
-		var element = React.createElement('li', {},
-			React.createElement('h2', {}, contact.name),
-			React.createElement('a', {href: 'mailto:'+contact.email}, contact.email)
+var ContactItem = React.createClass({
+	propTypes: {
+		name: React.PropTypes.string.isRequired,
+		email: React.PropTypes.string.isRequired,
+		description: React.PropTypes.string
+	},
+	render: function() {
+		return (
+			React.createElement('li', {},
+				React.createElement('h2', {}, this.props.name),
+				React.createElement('a', {href: 'mailto:'+this.props.email}, this.props.email),
+				React.createElement('div', {}, this.props.description)
+			)
 		);
-		accumulator.push(element);
 	}
+});
+
+var listElements = contacts.reduce(function(accumulator, contact) {
+	if(contact.email) accumulator.push(React.createElement(ContactItem, contact));
 	return accumulator;
 }, []);
 
