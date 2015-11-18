@@ -195,6 +195,15 @@ var database = process.env[process.env.NODE_ENV + '_database'];
 
 It's better to source variables from command line or with node options then with some starting javascript file, because some tools like babel can use those env variables. If you use npm scripts that's prefered way.
 
+##### Config format
+
+.env
+```
+NODE_ENV=development
+development_database=da
+development_token=1231234123551341
+```
+
 #### How to source variables into environment
 
 ##### Webstorm
@@ -208,15 +217,6 @@ npm i --save-dev dotenv
 Then in webstorm npm settings set `Node options` to `-r dotenv/config`.
 
 By default it will read from `.env` file.
-
-##### Config format
-
-.env
-```
-NODE_ENV=development
-development_database=da
-development_token=1231234123551341
-```
 
 ##### *nix
 
