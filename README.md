@@ -209,14 +209,16 @@ Then in webstorm npm settings set `Node options` to `-r dotenv/config`.
 
 By default it will read from `.env` file.
 
-##### *nix
+##### Config format
 
 .env
 ```
-NODE_ENV='development'
-development_database='da'
-development_secret='tasd'
+NODE_ENV=development
+development_database=da
+development_token=1231234123551341
 ```
+
+##### *nix
 
 source it:
 ```
@@ -226,19 +228,9 @@ echo $development_database
 
 ##### Windows
 
-http://stackoverflow.com/questions/22312671/node-js-setting-environment-variables?nah=1#28821696
-
-.env.bat
+source it using script `env.bat` from this repository:
 ```
-@echo off
-set NODE_ENV='development'
-set development_database='da'
-set development_secret='tasd'
-```
-
-source it:
-```
-c:> .\.env.bat
+.\env.bat
 echo %development_database%
 ```
 
