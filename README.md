@@ -223,7 +223,6 @@ development_token=1231234123551341
 source it:
 ```
 source env.sh
-echo $development_database
 ```
 
 ##### Windows
@@ -231,16 +230,23 @@ echo $development_database
 source it using script `env.bat` from this repository:
 ```
 .\env.bat
-echo %development_database%
 ```
 
-#### Testing
+#### Test it
+
+Run it from console:
 
 ```
-npm run check_env
+$ npm run check_env
+
+> react-starter-kit@0.0.0 check_env C:\Users\frolow\projects\react-starter-kit
+> node check_env.js
+
+process.env.NODE_ENV: development
+database: da
 ```
 
-or run from Webstorm npm plugin.
+or from Webstorm npm plugin.
 
 #### Babel
 

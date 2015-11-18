@@ -10,19 +10,20 @@ REM echo DEBUG: dotenv_config_path=%dotenv_config_path%
 
 if "%dotenv_config_path%"=="" (
   REM echo DEBUG: dotenv_config_path empty
-  if not exist .env (
-    REM echo DEBUG: not exist .env
-    call:usage
-  ) else (
-    REM echo DEBUG: exist .env
+  if exist .env (
+    REM echo DEBUG: .env exists
     set file=.env
     call:process
+  ) else (
+    REM echo DEBUG: .env does't exists
+    call:usage
   )
 ) else if exist %dotenv_config_path% (
-  REM echo DEBUG: exist dotenv_config_path
+  REM echo DEBUG: file dotenv_config_path exists
   set file=%dotenv_config_path%
   call:process
 ) else (
+  REM echo DEBUG: file dotenv_config_path doesn't exists
   call:usage
 )
 
