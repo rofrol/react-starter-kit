@@ -51,18 +51,25 @@ ReactDOM.render(
 	document.getElementById('app')
 );
 
+var contacts = [
+	{key: 1, name: 'John Doe', email: 'john.doe@example.com'},
+	{key: 2, name: 'Joe Pesci'}
+];
+
+var listElements = contacts.reduce(function(accumulator, contact) {
+	if(contact.email) {
+		var element = React.createElement('li', {},
+			React.createElement('h2', {}, contact.name),
+			React.createElement('a', {href: 'mailto:'+contact.email}, contact.email)
+		);
+		accumulator.push(element);
+	}
+	return accumulator;
+}, []);
+
 var rootElement = React.createElement('div', {},
 	React.createElement('h1', {}, 'Contacts'),
-	React.createElement('ul', {},
-		React.createElement('li', {},
-			React.createElement('h2', {}, 'John Doe'),
-			React.createElement('a', {href: 'mailto:john.doe@example.com'}, 'john.doe@example.com')
-		),
-		React.createElement('li', {},
-			React.createElement('h2', {}, 'Joe Pesci'),
-			React.createElement('a', {href: 'mailto:joe.pesci@example.com'}, 'joe.pesci@example.com')
-		)
-	)
+	React.createElement('ul', {}, listElements)
 );
 
 ReactDOM.render(rootElement, document.querySelector('#raw-reactjs'));
