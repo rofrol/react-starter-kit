@@ -220,3 +220,11 @@ source it:
 source env.sh
 echo $one
 ```
+
+#### Babel
+
+> It is up to you to ensure that the transform is not enabled when you compile the app in production mode.
+> The easiest way to do this is to put React Transform configuration inside env.development in .babelrc
+> and ensure you’re calling babel with NODE_ENV=production.
+> See babelrc documentation for more details about using env option.
+> https://github.com/gaearon/react-transform-hmr
