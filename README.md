@@ -154,3 +154,69 @@ https://medium.com/@ddprrt/postcss-misconceptions-faf5dc5038df
 > it's time to think about [deprecating](https://github.com/postcss/postcss/issues/477) [cssnext](https://github.com/cssnext/cssnext/issues/208)
 
 In the future [postcss-cli will not be needed](https://github.com/postcss/postcss/issues/477), cmd line will be included in postcss.
+
+### NODE_ENV: production vs development
+
+#### Windows
+
+You can set NODE_ENV on windows as well:
+
+```
+set NODE_ENV=production
+npm run env:windows
+```
+
+Or using npm scripts (don't put space before `&&`):
+
+```
+"env:windows": "set NODE_ENV=development&& node env.js",
+```
+
+#### Best practices
+
+Use environmental variables rather than config file with grouping, because that is more language-independent and scales better when you add more deploys over app lifetime.
+http://12factor.net/config
+
+Also don't set NODE_ENV to any default like [this](http://stackoverflow.com/questions/11104028/process-env-node-env-is-undefined/31611428#31611428):
+
+```
+var environment = process.env.NODE_ENV || 'development';
+```
+
+because either development code and env shouldn't be exposed or development code could mangle with production database, etc.
+https://www.reddit.com/r/node/comments/3e9f2f/processenvnode_env_undefined_should_it_default_to/.
+
+In Webstorm11 there is plugin for npm. Click `gear icon > npm Settings` and set NODE_ENV as you wish.
+
+#### How to source variables into environment
+
+##### Windows
+
+http://stackoverflow.com/questions/22312671/node-js-setting-environment-variables?nah=1#28821696
+
+env.bat
+```
+@echo off
+set one='da'
+set two='tasd'
+```
+
+source it:
+```
+c:> .\env.bat
+echo %one%
+```
+
+##### *nix
+
+env.sh
+```
+one='da'
+two='tasd'
+```
+
+source it:
+```
+source env.sh
+echo $one
+```
