@@ -220,7 +220,7 @@ By default it will read from `.env` file.
 
 ##### *nix
 
-source it:
+source it using script `env.sh` from this repository:
 ```
 source env.sh
 ```
