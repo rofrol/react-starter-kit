@@ -189,6 +189,8 @@ In Webstorm11 there is plugin for npm. Click `gear icon > npm Settings` and set 
 
 #### How to source variables into environment
 
+It's better to source variables from command line then with some starting javascript file, because some tools like babel can use those env variables. If you use npm scripts that's prefered way.
+
 ##### Windows
 
 http://stackoverflow.com/questions/22312671/node-js-setting-environment-variables?nah=1#28821696
