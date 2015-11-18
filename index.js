@@ -50,3 +50,9 @@ ReactDOM.render(
 	<NoLink txt="some text"/>,
 	document.getElementById('app')
 );
+
+var rootElement = React.createElement('div', {},
+	React.createElement('h1', {}, 'Hello')
+);
+
+ReactDOM.render(rootElement, document.querySelector('#raw-reactjs'));
