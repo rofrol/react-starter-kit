@@ -34,7 +34,6 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 Install python in your PATH (needed for livereactload - hot reloading), then
 
     npm i
-    mkdir dist
 
 If you got error [msbuild.exe failed with exit code: 1](http://stackoverflow.com/questions/14180012/npm-install-for-some-packages-sqlite3-socket-io-fail-with-error-msb8020-on-wi/22120966#22120966), it's related to node-gyp. Set this:
 
