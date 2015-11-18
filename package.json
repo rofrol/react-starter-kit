@@ -1,7 +1,17 @@
 {
   "name": "react-starter-kit",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "React starter kit - no need for grunt/gulp/gloop/glugle/gleffy/gloran/whatever task runner comes out next week",
+  "homepage": "https://github.com/rofrol/react-starter-kit",
+  "author": {
+    "name": "Roman Frołow",
+    "email": "rofrol@gmail.com",
+    "url": "https://github.com/rofrol"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rofrol/react-starter-kit"
+  },
   "main": "index.js",
   "dependencies": {
     "hex-rgb": "^1.0.0",
