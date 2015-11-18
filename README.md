@@ -27,6 +27,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [ ] [rollup as es6 module bundler](https://github.com/eventualbuddha/rollup-starter-project), [another rollup example](https://github.com/Rich-Harris/rollup-example-for-srcspider) - [source](https://github.com/mbostock/d3/issues/2220#issuecomment-112418053)
 - [ ] flow or typescript
 - [ ] process manager instead of http-server: [pm2](https://github.com/Unitech/pm2), [forever](https://github.com/foreverjs/forever), [nodemon](https://github.com/remy/nodemon)
+- [x] NODE_ENV
 
 
 ## Install
@@ -158,7 +159,7 @@ In the future [postcss-cli will not be needed](https://github.com/postcss/postcs
 
 #### Windows
 
-You can set NODE_ENV on windows as well:
+You can set `NODE_ENV` on windows as well:
 
 ```
 set NODE_ENV=production
@@ -176,7 +177,7 @@ Or using npm scripts (don't put space before `&&`):
 Use environmental variables rather than config file with grouping, because that is more language-independent and scales better when you add more deploys over app lifetime.
 http://12factor.net/config
 
-Also don't set NODE_ENV to any default like [this](http://stackoverflow.com/questions/11104028/process-env-node-env-is-undefined/31611428#31611428):
+Also don't set `NODE_ENV` to any default like [this](http://stackoverflow.com/questions/11104028/process-env-node-env-is-undefined/31611428#31611428):
 
 ```
 var environment = process.env.NODE_ENV || 'development';
@@ -185,42 +186,69 @@ var environment = process.env.NODE_ENV || 'development';
 because either development code and env shouldn't be exposed or development code could mangle with production database, etc.
 https://www.reddit.com/r/node/comments/3e9f2f/processenvnode_env_undefined_should_it_default_to/.
 
-In Webstorm11 there is plugin for npm. Click `gear icon > npm Settings` and set NODE_ENV as you wish.
+Use prefix so you won't use some variable from different environment, i.e. previously you could set `database=some_url`.
+With prefix it would be `development_database`. Then read it in your application like this:
+
+```javascript
+var database = process.env[process.env.NODE_ENV + '_database'];
+```
+
+It's better to source variables from command line or with node options then with some starting javascript file, because some tools like babel can use those env variables. If you use npm scripts that's prefered way.
 
 #### How to source variables into environment
 
-It's better to source variables from command line then with some starting javascript file, because some tools like babel can use those env variables. If you use npm scripts that's prefered way.
+##### Webstorm
 
-##### Windows
+In Webstorm11 there is a plugin for npm. Click `gear icon > npm Settings`. You can set single variables like NODE_ENV but it's better to source it from file using [dotenv](https://github.com/motdotla/dotenv).
 
-http://stackoverflow.com/questions/22312671/node-js-setting-environment-variables?nah=1#28821696
-
-env.bat
 ```
-@echo off
-set one='da'
-set two='tasd'
+npm i --save-dev dotenv
 ```
 
-source it:
-```
-c:> .\env.bat
-echo %one%
-```
+Then in webstorm npm settings set `Node options` to `-r dotenv/config`.
+
+By default it will read from `.env` file.
 
 ##### *nix
 
-env.sh
+.env
 ```
-one='da'
-two='tasd'
+NODE_ENV='development'
+development_database='da'
+development_secret='tasd'
 ```
 
 source it:
 ```
 source env.sh
-echo $one
+echo $development_database
 ```
+
+##### Windows
+
+http://stackoverflow.com/questions/22312671/node-js-setting-environment-variables?nah=1#28821696
+
+.env.bat
+```
+@echo off
+set NODE_ENV='development'
+set development_database='da'
+set development_secret='tasd'
+```
+
+source it:
+```
+c:> .\.env.bat
+echo %development_database%
+```
+
+#### Testing
+
+```
+npm run check_env
+```
+
+or run from Webstorm npm plugin.
 
 #### Babel
 
