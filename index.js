@@ -4,6 +4,7 @@ import hex from 'hex-rgb';
 const rgb = (str) => hex(str).map(x => x / 255);
 
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 // http://www.newmediacampaigns.com/blog/refactoring-react-components-to-es6-classes
 // stopgap until ES7 allows property initializers
@@ -43,7 +44,7 @@ class NoLink extends BaseComponent {
 	}
 }
 
-React.render(
+ReactDOM.render(
 	<NoLink txt="some text"/>,
 	document.getElementById('app')
 );
