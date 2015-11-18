@@ -3,11 +3,6 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  },
   "dependencies": {
     "hex-rgb": "^1.0.0",
     "react": "0.14"
@@ -32,7 +27,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "postcss --watch -c postcss.json",
-    "js:build": "browserify index.js --debug -g uglifyify | exorcist dist/bundle.js.map > dist/bundle.js",
+    "js:build": "browserify index.js --debug -t babelify -g uglifyify | exorcist dist/bundle.js.map > dist/bundle.js",
     "js:build-dev": "browserify index.js --debug > dist/bundle.js",
     "js:watch": "watchify index.js -t babelify -p livereactload -d -v -o dist/bundle.js -p errorify",
     "http-server": "http-server -p 8888",
