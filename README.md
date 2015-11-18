@@ -225,7 +225,7 @@ source it using script `env.sh` from this repository:
 source env.sh
 ```
 
-##### Windows
+##### Windows cmd.exe
 
 source it using script `env.bat` from this repository:
 ```
