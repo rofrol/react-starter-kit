@@ -23,7 +23,7 @@ class NoLink extends BaseComponent {
 			message: '#abde13',
 			someStyle: {
 				color: 'white',
-				backgroundColor: 'blue'
+				backgroundColor: '#C594C5'
 			}
 		};
 		this._bind('handleChange');

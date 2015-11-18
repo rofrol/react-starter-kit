@@ -3,6 +3,15 @@
   --border-color: rgba(0,183,229,0.9);
 }
 
+body {
+  background-color: #1B2B34;
+  color: #A7ADBA;
+}
+
+a {
+  color: #6699CC;
+}
+
 body > .errorify {
   color: #cdd3de;
   background-color: #1b2b34;
