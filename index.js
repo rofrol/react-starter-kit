@@ -57,6 +57,8 @@ var contacts = [
 	{key: 3, name: 'Bigfoot Silva'}
 ];
 
+var newContact = {name: '', email: '', description: ''};
+
 var ContactItem = React.createClass({
 	propTypes: {
 		name: React.PropTypes.string.isRequired,
@@ -74,6 +76,34 @@ var ContactItem = React.createClass({
 	}
 });
 
+var ContactForm = React.createClass({
+	propTypes: {
+		contact:  React.PropTypes.object.isRequired
+	},
+
+	render: function() {
+		return (
+			React.createElement('form', {},
+				React.createElement('input', {
+					type: 'text',
+					placeholder: 'Name (required)',
+					value: this.props.contact.name
+				}),
+				React.createElement('input', {
+					type: 'email',
+					placeholder: 'Email (required)',
+					value: this.props.contact.email
+				}),
+				React.createElement('textarea', {
+					placeholder: 'Description',
+					value: this.props.contact.description
+				}),
+				React.createElement('button', {type: 'submit'}, 'Add Contact')
+			)
+		);
+	}
+});
+
 var listElements = contacts.reduce(function(accumulator, contact) {
 	if(contact.email) accumulator.push(React.createElement(ContactItem, contact));
 	return accumulator;
@@ -81,7 +111,8 @@ var listElements = contacts.reduce(function(accumulator, contact) {
 
 var rootElement = React.createElement('div', {},
 	React.createElement('h1', {}, 'Contacts'),
-	React.createElement('ul', {}, listElements)
+	React.createElement('ul', {}, listElements),
+	React.createElement(ContactForm, {contact: newContact})
 );
 
 ReactDOM.render(rootElement, document.querySelector('#raw-reactjs'));
