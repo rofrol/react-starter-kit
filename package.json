@@ -26,6 +26,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "check_env:windows": "set NODE_ENV=development&& node check_env.js",
     "css": "postcss --watch -c postcss.json",
     "js:build": "browserify index.js --debug -t babelify -g uglifyify | exorcist dist/bundle.js.map > dist/bundle.js",
     "js:build-dev": "browserify index.js --debug > dist/bundle.js",
