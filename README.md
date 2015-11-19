@@ -50,7 +50,7 @@ More about it:
 
 ## Workflow
 
-- Open your browser at http://localhost:8888.
+- Open your browser at [http://localhost:8888](http://localhost:8888).
 - Edit index.js, i.e. add another input, save
 - Watch how content in the browser changes without refreshing browser, thanks to livereactload.
     
