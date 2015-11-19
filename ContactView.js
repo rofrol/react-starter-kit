@@ -15,7 +15,10 @@ var ContactView = React.createClass({
 					if (contact.email) accumulator.push(React.createElement(ContactItem, contact));
 					return accumulator;
 				}, [])),
-				React.createElement(ContactForm, {contact: this.props.newContact})
+				React.createElement(ContactForm, {
+					value: this.props.newContact,
+					onChange: function(contact) { console.log(contact); }
+				})
 			)
 		)
 	}
