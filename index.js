@@ -59,75 +59,9 @@ var contacts = [
 
 var newContact = {name: '', email: '', description: ''};
 
-var ContactItem = React.createClass({
-	propTypes: {
-		name: React.PropTypes.string.isRequired,
-		email: React.PropTypes.string.isRequired,
-		description: React.PropTypes.string
-	},
-	render: function () {
-		return (
-			React.createElement('li', {className: 'ContactItem'},
-				React.createElement('h2', {className: 'ContactItem-name'}, this.props.name),
-				React.createElement('a', {className: 'ContactItem-email', href: 'mailto:' + this.props.email}, this.props.email),
-				React.createElement('div', {className: 'ContactItem-description'}, this.props.description)
-			)
-		);
-	}
-});
-
-var ContactForm = React.createClass({
-	propTypes: {
-		contact: React.PropTypes.object.isRequired
-	},
-
-	render: function () {
-		return (
-			React.createElement('form', {className: 'ContactForm'},
-				React.createElement('input', {
-					className: 'ContactForm-name',
-					type: 'text',
-					placeholder: 'Name (required)',
-					value: this.props.contact.name
-				}),
-				React.createElement('input', {
-					className: 'ContactForm-email',
-					type: 'email',
-					placeholder: 'Email (required)',
-					value: this.props.contact.email
-				}),
-				React.createElement('textarea', {
-					className: 'ContactForm-description',
-					placeholder: 'Description',
-					value: this.props.contact.description
-				}),
-				React.createElement('button', {
-					className: 'ContactForm-submit',
-					type: 'submit'
-				}, 'Add Contact')
-			)
-		);
-	}
-});
-
-var ContactView = React.createClass({
-	propTypes: {
-		contacts: React.PropTypes.array.isRequired,
-		newContact: React.PropTypes.object.isRequired
-	},
-	render: function () {
-		return (
-			React.createElement('div',
-				React.createElement('h1', {}, 'Contacts'),
-				React.createElement('ul', {className: 'ContactList'}, this.props.contacts.reduce(function (accumulator, contact) {
-					if (contact.email) accumulator.push(React.createElement(ContactItem, contact));
-					return accumulator;
-				}, [])),
-				React.createElement(ContactForm, {contact: newContact})
-			)
-		)
-	}
-});
+import ContactItem from './ContactItem';
+import ContactForm from './ContactForm';
+import ContactView from './ContactView';
 
 var rootElement = React.createElement(ContactView, {contacts: contacts, newContact: newContact});
 
