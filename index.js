@@ -65,11 +65,11 @@ var ContactItem = React.createClass({
 		email: React.PropTypes.string.isRequired,
 		description: React.PropTypes.string
 	},
-	render: function() {
+	render: function () {
 		return (
 			React.createElement('li', {},
 				React.createElement('h2', {}, this.props.name),
-				React.createElement('a', {href: 'mailto:'+this.props.email}, this.props.email),
+				React.createElement('a', {href: 'mailto:' + this.props.email}, this.props.email),
 				React.createElement('div', {}, this.props.description)
 			)
 		);
@@ -78,10 +78,10 @@ var ContactItem = React.createClass({
 
 var ContactForm = React.createClass({
 	propTypes: {
-		contact:  React.PropTypes.object.isRequired
+		contact: React.PropTypes.object.isRequired
 	},
 
-	render: function() {
+	render: function () {
 		return (
 			React.createElement('form', {},
 				React.createElement('input', {
@@ -104,15 +104,25 @@ var ContactForm = React.createClass({
 	}
 });
 
-var listElements = contacts.reduce(function(accumulator, contact) {
-	if(contact.email) accumulator.push(React.createElement(ContactItem, contact));
-	return accumulator;
-}, []);
+var ContactView = React.createClass({
+	propTypes: {
+		contacts: React.PropTypes.array.isRequired,
+		newContact: React.PropTypes.object.isRequired
+	},
+	render: function () {
+		return (
+			React.createElement('div',
+				React.createElement('h1', {}, 'Contacts'),
+				React.createElement('ul', {}, this.props.contacts.reduce(function (accumulator, contact) {
+					if (contact.email) accumulator.push(React.createElement(ContactItem, contact));
+					return accumulator;
+				}, [])),
+				React.createElement(ContactForm, {contact: newContact})
+			)
+		)
+	}
+});
 
-var rootElement = React.createElement('div', {},
-	React.createElement('h1', {}, 'Contacts'),
-	React.createElement('ul', {}, listElements),
-	React.createElement(ContactForm, {contact: newContact})
-);
+var rootElement = React.createElement(ContactView, {contacts: contacts, newContact: newContact});
 
 ReactDOM.render(rootElement, document.querySelector('#raw-reactjs'));
