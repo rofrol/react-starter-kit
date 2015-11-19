@@ -4,6 +4,26 @@ Stop the madness of learning new and fancy task runner/build system that comes e
 
 You might be interested in [angular boilerplate](https://github.com/grillorafael/angular-boilerplate) which also uses npm as task runner.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
+
+- [TODO](#todo)
+- [Install](#install)
+- [Run](#run)
+- [Workflow](#workflow)
+- [Why x instead of y?](#why-x-instead-of-y)
+  - [Why browserify instead of asynchronous module loader?](#why-browserify-instead-of-asynchronous-module-loader)
+  - [Why npm scripts instead of gulp, grunt, webpack as a task runner/build system?](#why-npm-scripts-instead-of-gulp-grunt-webpack-as-a-task-runnerbuild-system)
+  - [Why parallelshell?](#why-parallelshell)
+  - [Why npm scripts + browserify instead of webpack?](#why-npm-scripts--browserify-instead-of-webpack)
+  - [Why no global dependencies in package.json?](#why-no-global-dependencies-in-packagejson)
+  - [Why PostCSS?](#why-postcss)
+  - [Why not cssnext?](#why-not-cssnext)
+  - [NODE_ENV: production vs development](#node_env-production-vs-development)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## TODO
 - [x] es6 modules
 - [x] babel to use es6
