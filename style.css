@@ -6,6 +6,7 @@
 body {
   background-color: #1B2B34;
   color: #A7ADBA;
+  margin: 0;
 }
 
 a {
@@ -75,4 +76,40 @@ body > .errorify {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.ContactList {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ContactList > * {
+  padding: 5px 10px;
+}
+
+.ContactItem:not(:first-child) {
+  border-top: 1px solid grey;
+}
+
+.ContactItem .ContactItem-email {
+  font-style: italic;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 5px 10px;
+}
+
+.ContactForm > * {
+  flex: 100 0 0%;
+}
+
+.ContactForm > *:not(:first-child) {
+  margin-top: 10px;
+}
+
+.ContactForm > [type=submit] {
+  align-self: flex-start;
 }

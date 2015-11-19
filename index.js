@@ -67,10 +67,10 @@ var ContactItem = React.createClass({
 	},
 	render: function () {
 		return (
-			React.createElement('li', {},
-				React.createElement('h2', {}, this.props.name),
-				React.createElement('a', {href: 'mailto:' + this.props.email}, this.props.email),
-				React.createElement('div', {}, this.props.description)
+			React.createElement('li', {className: 'ContactItem'},
+				React.createElement('h2', {className: 'ContactItem-name'}, this.props.name),
+				React.createElement('a', {className: 'ContactItem-email', href: 'mailto:' + this.props.email}, this.props.email),
+				React.createElement('div', {className: 'ContactItem-description'}, this.props.description)
 			)
 		);
 	}
@@ -83,22 +83,28 @@ var ContactForm = React.createClass({
 
 	render: function () {
 		return (
-			React.createElement('form', {},
+			React.createElement('form', {className: 'ContactForm'},
 				React.createElement('input', {
+					className: 'ContactForm-name',
 					type: 'text',
 					placeholder: 'Name (required)',
 					value: this.props.contact.name
 				}),
 				React.createElement('input', {
+					className: 'ContactForm-email',
 					type: 'email',
 					placeholder: 'Email (required)',
 					value: this.props.contact.email
 				}),
 				React.createElement('textarea', {
+					className: 'ContactForm-description',
 					placeholder: 'Description',
 					value: this.props.contact.description
 				}),
-				React.createElement('button', {type: 'submit'}, 'Add Contact')
+				React.createElement('button', {
+					className: 'ContactForm-submit',
+					type: 'submit'
+				}, 'Add Contact')
 			)
 		);
 	}
@@ -113,7 +119,7 @@ var ContactView = React.createClass({
 		return (
 			React.createElement('div',
 				React.createElement('h1', {}, 'Contacts'),
-				React.createElement('ul', {}, this.props.contacts.reduce(function (accumulator, contact) {
+				React.createElement('ul', {className: 'ContactList'}, this.props.contacts.reduce(function (accumulator, contact) {
 					if (contact.email) accumulator.push(React.createElement(ContactItem, contact));
 					return accumulator;
 				}, [])),
