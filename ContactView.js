@@ -5,7 +5,8 @@ import ContactForm from './ContactForm';
 var ContactView = React.createClass({
 	propTypes: {
 		contacts: React.PropTypes.array.isRequired,
-		newContact: React.PropTypes.object.isRequired
+		newContact: React.PropTypes.object.isRequired,
+		onNewContactChange: React.PropTypes.func.isRequired
 	},
 	render: function () {
 		return (
@@ -17,7 +18,7 @@ var ContactView = React.createClass({
 				}, [])),
 				React.createElement(ContactForm, {
 					value: this.props.newContact,
-					onChange: function(contact) { console.log(contact); }
+					onChange: this.props.onNewContactChange
 				})
 			)
 		)

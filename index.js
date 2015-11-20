@@ -51,18 +51,39 @@ ReactDOM.render(
 	document.getElementById('app')
 );
 
-var contacts = [
-	{key: 1, name: 'John Doe', email: 'john.doe@example.com', description: 'Some guy'},
-	{key: 2, name: 'Joe Pesci', email: 'joe.pesci@example.com'},
-	{key: 3, name: 'Bigfoot Silva'}
-];
 
-var newContact = {name: '', email: '', description: ''};
+/* Raw react.js */
 
 import ContactItem from './ContactItem';
 import ContactForm from './ContactForm';
 import ContactView from './ContactView';
 
-var rootElement = React.createElement(ContactView, {contacts: contacts, newContact: newContact});
+/* Actions */
 
-ReactDOM.render(rootElement, document.querySelector('#raw-reactjs'));
+function updateNewContact(contact) {
+	setState({newContact: contact});
+}
+
+/* Model */
+
+var state = {};
+
+function setState(changes) {
+	Object.assign(state, changes);
+
+	ReactDOM.render(
+		React.createElement(ContactView, Object.assign({}, state, {
+			onNewContactChange: updateNewContact
+		})),
+		document.querySelector('#raw-reactjs')
+	);
+}
+
+setState({
+	contacts: [
+		{key: 1, name: 'John Doe', email: 'john.doe@example.com', description: 'Some guy'},
+		{key: 2, name: 'Joe Pesci', email: 'joe.pesci@example.com'},
+		{key: 3, name: 'Bigfoot Silva'},
+	],
+	newContact: {name: '', email: '', description: ''}
+});
