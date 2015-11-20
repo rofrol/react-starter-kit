@@ -58,10 +58,25 @@ import ContactItem from './ContactItem';
 import ContactForm from './ContactForm';
 import ContactView from './ContactView';
 
+/* Constants */
+
+var CONTACT_TEMPLATE = {name: '', email: '', description: '', errors: null};
+
 /* Actions */
 
 function updateNewContact(contact) {
-	setState({newContact: contact});
+	setState({ newContact: contact });
+}
+
+function submitNewContact() {
+	var contact = Object.assign({}, state.newContact, {key: state.contacts.length + 1, errors: {}});
+
+	if (contact.name && contact.email) {
+		var changes = { newContact: contact };
+		if(Object.keys(contact.errors).length === 0)
+			Object.assign(changes, { contacts: state.contacts.concat(contact) });
+		setState(changes);
+	}
 }
 
 /* Model */
@@ -73,7 +88,8 @@ function setState(changes) {
 
 	ReactDOM.render(
 		React.createElement(ContactView, Object.assign({}, state, {
-			onNewContactChange: updateNewContact
+			onNewContactChange: updateNewContact,
+			onNewContactSubmit: submitNewContact
 		})),
 		document.querySelector('#raw-reactjs')
 	);
@@ -83,7 +99,7 @@ setState({
 	contacts: [
 		{key: 1, name: 'John Doe', email: 'john.doe@example.com', description: 'Some guy'},
 		{key: 2, name: 'Joe Pesci', email: 'joe.pesci@example.com'},
-		{key: 3, name: 'Bigfoot Silva'},
+		{key: 3, name: 'Bigfoot Silva'}
 	],
-	newContact: {name: '', email: '', description: ''}
+	newContact: Object.assign({}, CONTACT_TEMPLATE)
 });
