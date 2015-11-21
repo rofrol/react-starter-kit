@@ -1,3 +1,5 @@
+"use strict";
+
 import React from 'react';
 import ContactItem from './ContactItem';
 import ContactForm from './ContactForm';
