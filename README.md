@@ -113,6 +113,13 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 - http://substack.net/task_automation_with_npm_run
 - http://learnjs.io/blog/2014/02/06/creating-js-library-builds-with-browserify-and-other-npm-modules/
 
+#### Webstorm and source maps
+
+> I (with some help) found a work-arround for successfully using browserify source maps from IntelliJ:
+> http://stackoverflow.com/questions/31070112/enable-javascript-debugging-with-intellij-and-source-maps
+
+https://github.com/substack/node-browserify/issues/1233#issuecomment-123302577
+
 ### Why parallelshell?
 
 - [cmd.exe doesn't support &](https://github.com/npm/npm/issues/8358)
