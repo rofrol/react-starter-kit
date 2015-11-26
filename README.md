@@ -52,6 +52,8 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 
 ## Install
 
+Clone this repo and inside the directory run
+
     npm i
 
 If you got error [msbuild.exe failed with exit code: 1](http://stackoverflow.com/questions/14180012/npm-install-for-some-packages-sqlite3-socket-io-fail-with-error-msb8020-on-wi/22120966#22120966), it's related to node-gyp. Set this:
