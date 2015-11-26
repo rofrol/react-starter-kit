@@ -113,3 +113,7 @@ body > .errorify {
 .ContactForm > [type=submit] {
   align-self: flex-start;
 }
+
+.ContactForm > .ContactForm-error {
+  border: 1px solid red;
+}

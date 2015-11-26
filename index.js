@@ -71,12 +71,19 @@ function updateNewContact(contact) {
 function submitNewContact() {
 	var contact = Object.assign({}, state.newContact, {key: state.contacts.length + 1, errors: {}});
 
-	if (contact.name && contact.email) {
-		var changes = { newContact: contact };
-		if(Object.keys(contact.errors).length === 0)
-			Object.assign(changes, { contacts: state.contacts.concat(contact) });
-		setState(changes);
+	if(!contact.name) {
+		contact.errors.name = ["Please enter your contact's name"];
 	}
+
+	if(!/.+@.+\..+/.test(contact.email)) {
+		contact.errors.email = ["Please enter you contact's email"];
+	}
+
+	var changes = {newContact: contact};
+	if (Object.keys(contact.errors).length === 0)
+		Object.assign(changes, {contacts: state.contacts.concat(contact)});
+
+	setState(changes);
 }
 
 /* Model */

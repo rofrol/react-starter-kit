@@ -24,17 +24,18 @@ var ContactForm = React.createClass({
 	},
 
 	render: function () {
+		var errors = this.props.value.errors || {};
 		return (
 			React.createElement('form', {onSubmit: this.onSubmit, className: 'ContactForm', noValidate: true},
 				React.createElement('input', {
-					className: 'ContactForm-name',
+					className: errors.name && 'ContactForm-error',
 					type: 'text',
 					placeholder: 'Name (required)',
 					value: this.props.value.name,
 					onChange: this.onNameInput
 				}),
 				React.createElement('input', {
-					className: 'ContactForm-email',
+					className: errors.email && 'ContactForm-error',
 					type: 'email',
 					placeholder: 'Email (required)',
 					value: this.props.value.email,
