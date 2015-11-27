@@ -1,17 +1,12 @@
 {
   "env": {
     "development": {
-      "plugins": [
-        "react-transform"
-      ],
-      "extra": {
-        "react-transform": {
-          "transforms": [{
-            "transform": "livereactload/babel-transform",
-            "imports": ["react"]
-          }]
-        }
-      }
+      "presets": [
+        "stage-0",
+        "es2015",
+        //"es2015-rollup",
+        "react"
+      ]
     }
   }
 }

@@ -28,14 +28,14 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [x] es6 modules
 - [x] babel to use es6
 - [x] browserify to bundle modules
-- [x] livereactload for hot reloading
+- [ ] livereactload for hot reloading (switch to babel5 branch if you need it, livereactload for babel6 isn't working yet)
 - [x] uglifyify for minification
 - [x] exorcist for external map files
 - [x] npm scripts for task running
 - [x] compile with browserify and babelify to one file `bundle.js`
 - [x] no additional abstraction like grunt/gulp/webpack
 - [x] [postcss](https://github.com/postcss/postcss)
-- [ ] [css modules](https://github.com/css-modules/css-modules)
+- [x] [react-pacomo](https://github.com/unicorn-standard/react-pacomo) ~~[css modules](https://github.com/css-modules/css-modules)~~
 - [ ] bundle splitting - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
 - [ ] isomorphic/universal/shared javascript with koa and flux/alt or [relay](https://github.com/relayjs/relay-starter-kit)
 - [ ] [eslint](https://github.com/eslint/eslint)
