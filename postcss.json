@@ -1,5 +1,5 @@
 {
-    "use": ["autoprefixer", "postcss-custom-properties"],
+    "use": ["postcss-nested", "postcss-custom-properties", "autoprefixer"],
     "input": "style.css",
     "output": "dist/bundle.css",
     "autoprefixer": {
