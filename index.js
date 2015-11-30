@@ -86,6 +86,10 @@ function submitNewContact() {
 	setState(changes);
 }
 
+function navigated() {
+	setState({location: window.location.hash});
+}
+
 /* Model */
 
 var state = {};
@@ -93,13 +97,20 @@ var state = {};
 function setState(changes) {
 	Object.assign(state, changes);
 
-	ReactDOM.render(
-		React.createElement(ContactView, Object.assign({}, state, {
-			onNewContactChange: updateNewContact,
-			onNewContactSubmit: submitNewContact
-		})),
-		document.querySelector('#raw-reactjs')
-	);
+	var component;
+
+	switch(state.location) {
+		case '#/addcontact':
+			component = React.createElement(ContactView, Object.assign({}, state, {
+				onNewContactChange: updateNewContact,
+				onNewContactSubmit: submitNewContact
+			}));
+			break;
+		default:
+			component = <h1>Home</h1>;
+	}
+
+	ReactDOM.render(component, document.querySelector('#raw-reactjs'));
 }
 
 setState({
@@ -108,5 +119,8 @@ setState({
 		{key: 2, name: 'Joe Pesci', email: 'joe.pesci@example.com'},
 		{key: 3, name: 'Bigfoot Silva'}
 	],
-	newContact: Object.assign({}, CONTACT_TEMPLATE)
+	newContact: Object.assign({}, CONTACT_TEMPLATE),
+	location: window.location.hash
 });
+
+window.addEventListener('hashchange', navigated);

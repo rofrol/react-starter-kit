@@ -7,6 +7,7 @@ body {
   background-color: #1B2B34;
   color: #A7ADBA;
   margin: 0;
+  font-family: sans-serif;
 }
 
 a {
@@ -116,4 +117,16 @@ body > .errorify {
 
 .ContactForm > .ContactForm-error {
   border: 1px solid red;
+}
+
+#topnav {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+#topnav > *:not(:first-child) {
+  margin-left: 10px;
+  border-left: 1px solid white;
+  padding-left: 10px;
 }
