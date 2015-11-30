@@ -10,6 +10,8 @@
         <div class="circle"></div>
         <div class="circle1"></div>
     </a>
-	<script src="dist/bundle.js"></script>
+	<!--  IE: 'Symbol' is not defined -->
+	<script src="node_modules/babel-cli/node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+	<script src="bundle.js"></script>
   </body>
 </html>
