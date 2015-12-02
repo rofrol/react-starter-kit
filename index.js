@@ -87,7 +87,9 @@ function submitNewContact() {
 }
 
 function navigated() {
-	setState({location: window.location.hash});
+	var location = window.location.hash.replace(/^#\//, '').split('/');
+	console.log(location);
+	setState({location: location});
 }
 
 /* Model */
@@ -99,8 +101,8 @@ function setState(changes) {
 
 	var component;
 
-	switch(state.location) {
-		case '#/addcontact':
+	switch(state.location[0]) {
+		case 'addcontact':
 			component = React.createElement(ContactView, Object.assign({}, state, {
 				onNewContactChange: updateNewContact,
 				onNewContactSubmit: submitNewContact
