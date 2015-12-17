@@ -88,8 +88,14 @@ function submitNewContact() {
 
 function navigated() {
 	var location = window.location.hash.replace(/^#\//, '').split('/');
+	if(location[0] === '') removeHash();
 	console.log(location);
 	setState({location: location});
+}
+
+// http://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-with-javascript-without-page-refresh/5298684#5298684
+function removeHash() {
+	window.history.replaceState('', document.title, window.location.pathname);
 }
 
 /* Model */
