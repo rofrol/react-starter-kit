@@ -56,7 +56,7 @@ ReactDOM.render(
 
 import ContactItem from './ContactItem';
 import ContactForm from './ContactForm';
-import ContactView from './ContactView';
+import ContactsView from './ContactsView';
 
 /* Constants */
 
@@ -109,7 +109,7 @@ function setState(changes) {
 
 	switch(state.location[0]) {
 		case 'addcontact':
-			component = React.createElement(ContactView, Object.assign({}, state, {
+			component = React.createElement(ContactsView, Object.assign({}, state, {
 				onNewContactChange: updateNewContact,
 				onNewContactSubmit: submitNewContact
 			}));

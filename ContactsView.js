@@ -4,7 +4,7 @@ import React from 'react';
 import ContactItem from './ContactItem';
 import ContactForm from './ContactForm';
 
-var ContactView = React.createClass({
+var ContactsView = React.createClass({
 	propTypes: {
 		contacts: React.PropTypes.array.isRequired,
 		newContact: React.PropTypes.object.isRequired,
@@ -29,4 +29,4 @@ var ContactView = React.createClass({
 	}
 });
 
-export default ContactView;
+export default ContactsView;
