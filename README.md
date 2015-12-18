@@ -10,6 +10,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 
 - [TODO](#todo)
 - [Install](#install)
+  - [Windows installation errors](#windows-installation-errors)
 - [Run](#run)
 - [Workflow](#workflow)
 - [Why x instead of y?](#why-x-instead-of-y)
@@ -28,7 +29,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [x] es6 modules
 - [x] babel to use es6
 - [x] browserify to bundle modules
-- [ ] livereactload for hot reloading (switch to babel5 branch if you need it, livereactload for babel6 isn't working yet)
+- [x] livereactload for hot reloading (with babel6)
 - [x] uglifyify for minification
 - [x] exorcist for external map files
 - [x] npm scripts for task running
@@ -56,13 +57,15 @@ Clone this repo and inside the directory run
 
     npm i
 
-If you got error [msbuild.exe failed with exit code: 1](http://stackoverflow.com/questions/14180012/npm-install-for-some-packages-sqlite3-socket-io-fail-with-error-msb8020-on-wi/22120966#22120966), it's related to node-gyp. Set this:
+### Windows installation errors
 
-    npm config set msvs_version 2013
-    
-Or any other version you have. There may be [problem with Visual Studio 2013](http://stackoverflow.com/questions/20051318/npm-native-builds-with-only-visual-studio-2013-installed/26685368#26685368).
+If you got error when building some native modules on Windows
+- Install [Microsoft Build Tools 2013](http://www.microsoft.com/en-us/download/details.aspx?id=40760) ([No need for the entire visual studio)[http://stackoverflow.com/questions/14278417/cannot-install-node-modules-that-require-compilation-on-windows-7-x64-vs2012/31987161#31987161))
+- [update internal node-gyp](https://github.com/nodejs/node-gyp/wiki/Updating-npm's-bundled-node-gyp) (don't just install it globally)
+- Set [msvs_version](http://stackoverflow.com/questions/14180012/npm-install-for-some-packages-sqlite3-socket-io-fail-with-error-msb8020-on-wi/22120966#22120966) if you have more than one version of compiler installed
 
 More about it:
+- http://stackoverflow.com/questions/20051318/npm-native-builds-with-only-visual-studio-2013-installed
 - [node-gyp versions](https://github.com/nodejs/node-gyp/blob/master/gyp/pylib/gyp/MSVSVersion.py)
 - https://github.com/nodejs/node-gyp
 
@@ -75,7 +78,7 @@ More about it:
 - Open your browser at [http://localhost:8888](http://localhost:8888).
 - Edit index.js, i.e. add another input, save
 - Watch how content in the browser changes without refreshing browser, thanks to livereactload.
-    
+
 ## Why x instead of y?
 
 ### Why browserify instead of asynchronous module loader?
