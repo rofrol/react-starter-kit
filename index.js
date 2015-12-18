@@ -131,4 +131,6 @@ setState({
 	location: window.location.hash
 });
 
+navigated(); // needed when there is some hash during first load
+
 window.addEventListener('hashchange', navigated);
