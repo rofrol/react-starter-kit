@@ -16,7 +16,15 @@ var ContactsView = React.createClass({
 			React.createElement('div', {},
 				React.createElement('h1', {}, 'Contacts'),
 				React.createElement('ul', {className: 'ContactList'}, this.props.contacts.reduce(function (accumulator, contact) {
-					if (contact.email) accumulator.push(React.createElement(ContactItem, contact));
+					if (contact.email) {
+						accumulator.push(
+							React.createElement(
+								ContactItem,
+								Object.assign({}, contact, {id: contact.key})
+							)
+						);
+					}
+
 					return accumulator;
 				}, [])),
 				React.createElement(ContactForm, {

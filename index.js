@@ -57,6 +57,7 @@ ReactDOM.render(
 import ContactItem from './ContactItem';
 import ContactForm from './ContactForm';
 import ContactsView from './ContactsView';
+import ContactView from './ContactView';
 
 /* Constants */
 
@@ -69,7 +70,7 @@ function updateNewContact(contact) {
 }
 
 function submitNewContact() {
-	var contact = Object.assign({}, state.newContact, {key: state.contacts.length + 1, errors: {}});
+	var contact = Object.assign({}, state.newContact, {key: (state.contacts.length + 1) + '', errors: {}});
 
 	if(!contact.name) {
 		contact.errors.name = ["Please enter your contact's name"];
@@ -114,6 +115,12 @@ function setState(changes) {
 				onNewContactSubmit: submitNewContact
 			}));
 			break;
+		case 'contacts':
+			var contact = state.contacts.filter(function(contact) { return contact.key == state.location[1]; })[0];
+			component = React.createElement(ContactView, Object.assign({}, state, {
+				contact: contact
+			}));
+			break;
 		default:
 			component = <h1>Home</h1>;
 	}
@@ -123,9 +130,9 @@ function setState(changes) {
 
 setState({
 	contacts: [
-		{key: 1, name: 'John Doe', email: 'john.doe@example.com', description: 'Some guy'},
-		{key: 2, name: 'Joe Pesci', email: 'joe.pesci@example.com'},
-		{key: 3, name: 'Bigfoot Silva'}
+		{key: '1', name: 'John Doe', email: 'john.doe@example.com', description: 'Some guy'},
+		{key: '2', name: 'Joe Pesci', email: 'joe.pesci@example.com'},
+		{key: '3', name: 'Bigfoot Silva'}
 	],
 	newContact: Object.assign({}, CONTACT_TEMPLATE),
 	location: window.location.hash
