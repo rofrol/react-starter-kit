@@ -1,12 +1,13 @@
 #!/bin/bash
 # http://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash/
+# http://stackoverflow.com/questions/22312671/node-js-setting-environment-variables/28821696#28821696
 
 function process() {
     echo "INFO: Using file '${file}'"
     echo
     echo "INFO: Sourced env variables:"
     while read -r line; do
-        echo "INFO:   ${line}"
+        echo "INFO: export ${line}"
         export "$line"
     done < "$file"
 }
