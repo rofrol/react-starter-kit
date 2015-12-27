@@ -7,6 +7,7 @@ const rgb = (str) => hex(str).map(x => x / 255);
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+var patch = ReactDOM.render.bind(ReactDOM);
 
 // http://www.newmediacampaigns.com/blog/refactoring-react-components-to-es6-classes
 // stopgap until ES7 allows property initializers
@@ -125,7 +126,7 @@ function setState(changes) {
 			component = <h1>Home</h1>;
 	}
 
-	ReactDOM.render(component, document.querySelector('#raw-reactjs'));
+	patch(component, document.querySelector('#raw-reactjs'));
 }
 
 setState({
