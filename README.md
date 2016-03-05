@@ -234,7 +234,13 @@ development_database=da
 development_token=1231234123551341
 ```
 
+Warning! Ensure there are unix line endings in `.env` or there may be problems.
+
 #### How to source variables into environment
+
+##### autoenv
+
+https://github.com/kennethreitz/autoenv
 
 ##### Webstorm
 
