@@ -1,14 +1,9 @@
 {
-  "presets": ["es2015", "react"],
+  "presets": ["es2015"],
   "env": {
     "development": {
       "plugins": [
-        ["react-transform", {
-          "transforms": [{
-            "transform": "livereactload/babel-transform",
-            "imports": ["react"]
-          }]
-        }]
+        ["transform-react-jsx", { "pragma": "hJSX" }]
       ]
     }
   }

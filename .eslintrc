@@ -1,0 +1,7 @@
+{
+  'extends': 'airbnb',
+  'rules': {
+    'react/react-in-jsx-scope': 0, // when using jsx with i.e. cycle.js and not with react.js
+    'comma-dangle': 0
+  }
+}
