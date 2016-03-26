@@ -24,6 +24,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
   - [no global dependencies in package.json](#no-global-dependencies-in-packagejson)
   - [CSS and PostCSS](#css-and-postcss)
     - [Why not cssnext?](#why-not-cssnext)
+    - [colorguard](#colorguard)
   - [NODE_ENV: production vs development](#node_env-production-vs-development)
     - [Windows](#windows)
     - [Best practices](#best-practices)
@@ -64,6 +65,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [x] NODE_ENV
 - [x] css lint: [stylelint](https://github.com/stylelint/stylelint)
 - [x] postcss-flexbugs-fixes
+- [x] postcss colorguard
 
 
 ## Install
@@ -201,6 +203,10 @@ And then use it like this `npm run http-server` or use without aliasing first `n
 > it's time to think about [deprecating](https://github.com/postcss/postcss/issues/477) [cssnext](https://github.com/cssnext/cssnext/issues/208)
 
 In the future [postcss-cli will not be needed](https://github.com/postcss/postcss/issues/477), cmd line will be included in postcss.
+
+#### colorguard
+
+Remeber to use colorguard before postcss-custom-properties, because when you have unused properties with colors, they will be stripped out and you won't see any warnings.
 
 ### NODE_ENV: production vs development
 

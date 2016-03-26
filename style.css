@@ -1,6 +1,9 @@
 :root {
   --box-shadow-color: #2187e7;
   --border-color: rgba(0, 183, 229, 0.9);
+  --border-color2: rgba(0, 183, 228, 0.9);
+  --border-color3: #212121;
+  --border-color4: #202020;
 }
 
 body {

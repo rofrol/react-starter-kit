@@ -1,8 +1,11 @@
 {
-    "use": ["postcss-nested", "postcss-custom-properties", "postcss-flexbugs-fixes", "autoprefixer"],
+    "use": ["colorguard", "postcss-nested", "postcss-custom-properties", "postcss-flexbugs-fixes", "autoprefixer"],
     "input": "style.css",
     "output": "dist/bundle.css",
     "autoprefixer": {
-        "browsers": "last 2 versions"
+      "browsers": "last 2 versions"
+    },
+    "colorguard": {
+      "whitelist": [["#212121", "#202020"]]
     }
 }
