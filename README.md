@@ -13,15 +13,15 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
   - [Windows installation errors](#windows-installation-errors)
 - [Run](#run)
 - [Workflow](#workflow)
-- [Why x instead of y?](#why-x-instead-of-y)
-  - [Why browserify instead of asynchronous module loader?](#why-browserify-instead-of-asynchronous-module-loader)
-  - [Why npm scripts instead of gulp, grunt, webpack as a task runner/build system?](#why-npm-scripts-instead-of-gulp-grunt-webpack-as-a-task-runnerbuild-system)
+- [Design choices](#design-choices)
+  - [browserify instead of asynchronous module loader](#browserify-instead-of-asynchronous-module-loader)
+  - [npm scripts instead of gulp, grunt, webpack as a task runner/build system](#npm-scripts-instead-of-gulp-grunt-webpack-as-a-task-runnerbuild-system)
     - [How to use npm and browserify](#how-to-use-npm-and-browserify)
     - [Webstorm and source maps](#webstorm-and-source-maps)
-  - [Why parallelshell?](#why-parallelshell)
+  - [parallelshell](#parallelshell)
     - [parallelshell in cmd.exe](#parallelshell-in-cmdexe)
-  - [Why npm scripts + browserify instead of webpack?](#why-npm-scripts--browserify-instead-of-webpack)
-  - [Why no global dependencies in package.json?](#why-no-global-dependencies-in-packagejson)
+  - [npm scripts + browserify instead of webpack](#npm-scripts--browserify-instead-of-webpack)
+  - [no global dependencies in package.json](#no-global-dependencies-in-packagejson)
   - [CSS and PostCSS](#css-and-postcss)
     - [Why not cssnext?](#why-not-cssnext)
   - [NODE_ENV: production vs development](#node_env-production-vs-development)
@@ -93,9 +93,9 @@ More about it:
 - Edit index.js, i.e. add another input, save
 - Watch how content in the browser changes without refreshing browser, thanks to livereactload.
 
-## Why x instead of y?
+## Design choices
 
-### Why browserify instead of asynchronous module loader?
+### browserify instead of asynchronous module loader
 
 Because you need full runtime when using jspm or others.
 
@@ -117,7 +117,7 @@ System.import('./index').then(function(index) {
 });
 ```
 
-### Why npm scripts instead of gulp, grunt, webpack as a task runner/build system?
+### npm scripts instead of gulp, grunt, webpack as a task runner/build system
 
 http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
@@ -139,7 +139,7 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 https://github.com/substack/node-browserify/issues/1233#issuecomment-123302577
 
-### Why parallelshell?
+### parallelshell
 
 - [cmd.exe doesn't support &](https://github.com/npm/npm/issues/8358)
 
@@ -154,7 +154,7 @@ On Windows you need to use double-quotes to avoid confusing the argument parser:
 ```
 
 
-### Why npm scripts + browserify instead of webpack?
+### npm scripts + browserify instead of webpack
 
 > Webpack seems like an amazing tool, and does present some great features (hot module replacement, code splitting, sync vs. async requires, etc). However, it does not promote code re-use in the way that NPM and Browserify does. It encourages a “whole new way” of writing modules and often requires manually-maintained config files. - http://mattdesl.svbtle.com/browserify-vs-webpack
 
@@ -174,7 +174,7 @@ On Windows you need to use double-quotes to avoid confusing the argument parser:
 - [browesrify + css modules](https://github.com/css-modules/browserify-demo)
 - [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
 
-### Why no global dependencies in package.json?
+### no global dependencies in package.json
 
 - http://www.joezimjs.com/javascript/no-more-global-npm-packages/
 - http://stackoverflow.com/questions/14657170/installing-global-npm-dependencies-via-package-json/14657796#14657796
