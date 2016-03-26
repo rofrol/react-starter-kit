@@ -6,17 +6,16 @@
 body {
   background-color: #1b2b34;
   color: #a7adba;
+  & > .errorify {
+    color: #cdd3de;
+    background-color: #1b2b34;
+    font-family: Consolas, monospace;
+    padding: 5px 10px;
+  }
 }
 
 a {
   color: #69c;
-}
-
-body > .errorify {
-  color: #cdd3de;
-  background-color: #1b2b34;
-  font-family: Consolas, monospace;
-  padding: 5px 10px;
 }
 
 .circle {
@@ -74,5 +73,12 @@ body > .errorify {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.flex {
+  display: flex;
+  & > * {
+    flex: 1;
   }
 }

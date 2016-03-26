@@ -63,6 +63,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [ ] process manager instead of http-server: [pm2](https://github.com/Unitech/pm2), [forever](https://github.com/foreverjs/forever), [nodemon](https://github.com/remy/nodemon)
 - [x] NODE_ENV
 - [x] css lint: [stylelint](https://github.com/stylelint/stylelint)
+- [x] postcss-flexbugs-fixes
 
 
 ## Install

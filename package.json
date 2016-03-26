@@ -40,6 +40,7 @@
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.1.0",
     "postcss-custom-properties": "^5.0.0",
+    "postcss-flexbugs-fixes": "^2.0.0",
     "postcss-nested": "^1.0.0",
     "react-proxy": "^1.1.1",
     "rollup": "^0.21.0",
