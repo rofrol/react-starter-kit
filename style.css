@@ -1,30 +1,30 @@
 :root {
   --box-shadow-color: #2187e7;
-  --border-color: rgba(0,183,229,0.9);
+  --border-color: rgba(0, 183, 229, 0.9);
 }
 
 body {
-  background-color: #1B2B34;
-  color: #A7ADBA;
+  background-color: #1b2b34;
+  color: #a7adba;
 }
 
 a {
-  color: #6699CC;
+  color: #69c;
 }
 
 body > .errorify {
   color: #cdd3de;
   background-color: #1b2b34;
-  font-family: 'Consolas', monospace;
+  font-family: Consolas, monospace;
   padding: 5px 10px;
 }
 
 .circle {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border: 5px solid var(--border-color);
-  opacity: .9;
-  border-right: 5px solid rgba(0,0,0,0);
-  border-left: 5px solid rgba(0,0,0,0);
+  opacity: 0.9;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-left: 5px solid rgba(0, 0, 0, 0);
   border-radius: 50px;
   box-shadow: 0 0 35px #2187e7;
   width: 50px;
@@ -34,11 +34,11 @@ body > .errorify {
 }
 
 .circle1 {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border: 5px solid var(--border-color);
-  opacity: .9;
-  border-left: 5px solid rgba(0,0,0,0);
-  border-right: 5px solid rgba(0,0,0,0);
+  opacity: 0.9;
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-right: 5px solid rgba(0, 0, 0, 0);
   border-radius: 50px;
   box-shadow: 0 0 15px var(--box-shadow-color);
   width: 30px;

@@ -29,6 +29,7 @@
     "babel-preset-stage-0": "^6.1.18",
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
+    "doctoc": "^1.0.0",
     "dotenv": "^1.2.0",
     "errorify": "^0.3.1",
     "eslint": "^2.3.0",
@@ -43,6 +44,8 @@
     "react-proxy": "^1.1.1",
     "rollup": "^0.21.0",
     "rollup-plugin-babel": "^2.1.0",
+    "stylelint": "^5.2.1",
+    "stylelint-config-standard": "^4.0.1",
     "uglifyify": "^3.0.1",
     "watchify": "^3.6.1"
   },
@@ -55,7 +58,8 @@
     "js:build-dev": "browserify index.js --debug -t babelify -o bundle.js -p errorify",
     "js:watch": "watchify index.js -t babelify -p livereactload -d -v -o bundle.js -p errorify",
     "http-server": "http-server -p 8888",
-    "dev": "parallelshell \"npm run css\" \"npm run js:watch\" \"npm run http-server\""
+    "dev": "parallelshell \"npm run css\" \"npm run js:watch\" \"npm run http-server\"",
+    "toc": "doctoc README.md --github"
   },
   "license": "MIT"
 }

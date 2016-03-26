@@ -16,12 +16,25 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [Why x instead of y?](#why-x-instead-of-y)
   - [Why browserify instead of asynchronous module loader?](#why-browserify-instead-of-asynchronous-module-loader)
   - [Why npm scripts instead of gulp, grunt, webpack as a task runner/build system?](#why-npm-scripts-instead-of-gulp-grunt-webpack-as-a-task-runnerbuild-system)
+    - [How to use npm and browserify](#how-to-use-npm-and-browserify)
+    - [Webstorm and source maps](#webstorm-and-source-maps)
   - [Why parallelshell?](#why-parallelshell)
+    - [parallelshell in cmd.exe](#parallelshell-in-cmdexe)
   - [Why npm scripts + browserify instead of webpack?](#why-npm-scripts--browserify-instead-of-webpack)
   - [Why no global dependencies in package.json?](#why-no-global-dependencies-in-packagejson)
-  - [Why PostCSS?](#why-postcss)
-  - [Why not cssnext?](#why-not-cssnext)
+  - [CSS and PostCSS](#css-and-postcss)
+    - [Why not cssnext?](#why-not-cssnext)
   - [NODE_ENV: production vs development](#node_env-production-vs-development)
+    - [Windows](#windows)
+    - [Best practices](#best-practices)
+      - [Config format](#config-format)
+    - [How to source variables into environment](#how-to-source-variables-into-environment)
+      - [autoenv](#autoenv)
+      - [Webstorm](#webstorm)
+      - [*nix](#nix)
+      - [Windows cmd.exe](#windows-cmdexe)
+    - [Test it](#test-it)
+    - [Babel](#babel)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -49,6 +62,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
 - [ ] flow or typescript
 - [ ] process manager instead of http-server: [pm2](https://github.com/Unitech/pm2), [forever](https://github.com/foreverjs/forever), [nodemon](https://github.com/remy/nodemon)
 - [x] NODE_ENV
+- [x] css lint: [stylelint](https://github.com/stylelint/stylelint)
 
 
 ## Install
@@ -175,11 +189,13 @@ To use local dependencies in command line, alias it in package.json
 
 And then use it like this `npm run http-server` or use without aliasing first `node_modules/.bin/http-server`.
 
-### Why PostCSS?
+### CSS and PostCSS
 
-https://medium.com/@ddprrt/postcss-misconceptions-faf5dc5038df
+- https://medium.com/@ddprrt/postcss-misconceptions-faf5dc5038df
+- http://www.sitepoint.com/postcss-mythbusting/
+- Atom plugin for linter https://github.com/AtomLinter/linter-stylelint
 
-### Why not cssnext?
+#### Why not cssnext?
 
 > it's time to think about [deprecating](https://github.com/postcss/postcss/issues/477) [cssnext](https://github.com/cssnext/cssnext/issues/208)
 
