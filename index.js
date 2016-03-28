@@ -1,7 +1,7 @@
 // https://www.reddit.com/r/javascript/comments/332v73/is_anyone_using_es6_in_a_large_project_hows_it/cqh2u7i
 import hex from 'hex-rgb';
 
-const rgb = (str) => hex(str).map(x => x / 255);
+const rgb = str => hex(str).map(x => x / 255);
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,16 +14,13 @@ class BaseComponent extends React.Component {
 // http://www.newmediacampaigns.com/blog/refactoring-react-components-to-es6-classes
 // http://stackoverflow.com/questions/34244888/how-do-i-configure-eslint-to-allow-fat-arrow-class-methods/34254000#34254000
 class NoLink extends BaseComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: '#abde13',
-      someStyle: {
-        color: 'white',
-        backgroundColor: '#C594C5',
-      },
-    };
-  }
+  state = {
+    message: '#abde13',
+    someStyle: {
+      color: 'white',
+      backgroundColor: '#C594C5',
+    },
+  };
 
   handleChange = event => {
     this.setState(
