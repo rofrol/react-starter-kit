@@ -5,4 +5,4 @@ const {
 	transformer: pacomoTransformer,
 } = withPackageName('app');
 
-export {pacomoTransformer, pacomoDecorator};
+export { pacomoTransformer, pacomoDecorator };
