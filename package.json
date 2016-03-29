@@ -57,7 +57,7 @@
     "check_env": "node check_env.js",
     "check_env:windows": "set NODE_ENV=development&& node check_env.js",
     "css": "postcss --watch -c postcss.json",
-    "js:build": "browserify index.js --debug -t babelify -g uglifyify",
+    "js:build": "browserify index.js --debug -t babelify -g uglifyify -o bundle.js",
     "js:build-dev": "browserify index.js --debug -t babelify -o bundle.js -p errorify",
     "js:watch": "watchify index.js -t babelify -p livereactload -d -v -o bundle.js -p errorify",
     "http-server": "http-server -p 8888",

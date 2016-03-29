@@ -36,6 +36,7 @@ You might be interested in [angular boilerplate](https://github.com/grillorafael
       - [Windows cmd.exe](#windows-cmdexe)
     - [Test it](#test-it)
     - [Babel](#babel)
+  - [JSX](#jsx)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -315,3 +316,11 @@ or from Webstorm npm plugin.
 > See babelrc documentation for more details about using env option.
 >
 > https://github.com/gaearon/react-transform-hmr
+
+### JSX
+
+If you use jsx, you have to explicitly import react.
+
+There are two rules in eslint that may be confusing:
+- Prevent missing React when using JSX https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
+- If you are using the @jsx pragma this rule will mark the designated variable and not the React one https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md

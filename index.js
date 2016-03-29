@@ -6,8 +6,7 @@ const rgb = str => hex(str).map(x => x / 255);
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class BaseComponent extends React.Component {
-}
+import BaseComponent from './components/BaseComponent';
 
 // Class Property Declarations is stage 1 proposal currently https://github.com/eslint/eslint/issues/4683#issuecomment-164217757
 // http://egorsmirnov.me/2015/08/16/react-and-es6-part3.html
