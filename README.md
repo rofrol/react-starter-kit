@@ -283,7 +283,7 @@ Then in webstorm npm settings set `Node options` to `-r dotenv/config`.
 
 By default it will read from `.env` file.
 
-##### *nix
+##### \*nix
 
 source it using script `env.sh` from this repository:
 ```
@@ -328,5 +328,20 @@ If you use jsx, you have to explicitly import react.
 
 There are two rules in eslint that may be confusing:
 - Prevent missing React when using JSX https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
-- If you are using the @jsx pragma this rule will mark the designated variable and not the React one https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
-para
+- This option is deprecated, please use the shared settings to specify a custom pragma. If you are using the @jsx pragma this rule will mark the designated variable and not the React one https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
+
+To specify custom pragma:
+
+```
+'plugins': [
+  'react'
+],
+"settings": {
+  "react": {
+    "pragma": "hJSX",  // Pragma to use, default to "React"
+  }
+},
+"parser": "babel-eslint",
+```
+
+https://github.com/yannickcr/eslint-plugin-react/blob/master/README.md#configuration
