@@ -143,20 +143,25 @@ http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
 
 https://github.com/substack/node-browserify/issues/1233#issuecomment-123302577
 
-### parallelshell
+### Run commands concurrently
 
 - [cmd.exe doesn't support &](https://github.com/npm/npm/issues/8358)
 
-#### parallelshell in cmd.exe
+Use `concurrently`, `parallelshell` failed me on hackwaw. There is also `npm-run-all`.
+
+`npm i concurrently`
 
 On Windows you need to use double-quotes to avoid confusing the argument parser:
 
 ```javascript
   "scripts": {
-    "dev": "parallelshell \"npm run watch\" \"npm run reactload\" \"npm run http-server\""
+    "dev": "concurrently \"npm run watch\" \"npm run reactload\" \"npm run http-server\""
   },
 ```
 
+Use `--raw` to preserve colors.
+
+http://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel
 
 ### npm scripts + browserify instead of webpack
 
@@ -324,3 +329,4 @@ If you use jsx, you have to explicitly import react.
 There are two rules in eslint that may be confusing:
 - Prevent missing React when using JSX https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
 - If you are using the @jsx pragma this rule will mark the designated variable and not the React one https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
+para

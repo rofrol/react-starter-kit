@@ -31,6 +31,7 @@
     "babelify": "^7.2.0",
     "browserify": "^12.0.1",
     "colorguard": "^1.1.1",
+    "concurrently": "^2.0.0",
     "doctoc": "^1.0.0",
     "dotenv": "^1.2.0",
     "errorify": "^0.3.1",
@@ -39,7 +40,6 @@
     "eslint-plugin-react": "^4.1.0",
     "http-server": "^0.8.0",
     "livereactload": "^2.1.0",
-    "parallelshell": "^2.0.0",
     "postcss-cli": "^2.1.0",
     "postcss-custom-properties": "^5.0.0",
     "postcss-flexbugs-fixes": "^2.0.0",
@@ -61,7 +61,7 @@
     "js:build-dev": "browserify index.js --debug -t babelify -o bundle.js -p errorify",
     "js:watch": "watchify index.js -t babelify -p livereactload -d -v -o bundle.js -p errorify",
     "http-server": "http-server -p 8888",
-    "dev": "parallelshell \"npm run css\" \"npm run js:watch\" \"npm run http-server\"",
+    "dev": "concurrently -k \"npm run css\" \"npm run js:watch\" \"npm run http-server\"",
     "toc": "doctoc README.md --github"
   },
   "license": "MIT"
