@@ -123,7 +123,9 @@ System.import('./index').then(function(index) {
 
 ### npm scripts instead of gulp, grunt, webpack as a task runner/build system
 
-http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
+- http://blog.keithcirkel.co.uk/why-we-should-stop-using-grunt/
+- https://github.com/mattdesl/module-best-practices#task-running
+  - https://github.com/tomekwi/elm-live/issues/70#issuecomment-262691943
 
 > no need for grunt/gulp/gloop/glugle/gleffy/gloran/whatever task runner comes out next week
 >
